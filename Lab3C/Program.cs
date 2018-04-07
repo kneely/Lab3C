@@ -26,6 +26,10 @@ namespace Lab3C
             {
                 Divide();
             }
+            else
+            {
+                Console.WriteLine("Thanks for playing!");
+            }
         }
 
         static void Add()
@@ -74,10 +78,16 @@ namespace Lab3C
 
             Console.WriteLine("Please enter the second number.");
             b = Convert.ToDecimal(Console.ReadLine());
+            if (b == 0)
+            {
+                Console.WriteLine("You cannot divide by zero. Please enter another number.");
+                Console.WriteLine("Please enter a new number to divide by.");
+                b = Convert.ToDecimal(Console.ReadLine());
+            }
+          
+                result = (a / b);
 
-            result = (a / b);
-
-            Console.WriteLine("{0} divided by {1} is {2}", a, b, result);
+                Console.WriteLine("{0} divided by {1} is {2}", a, b, result);
         }
     }
 }
