@@ -9,29 +9,22 @@ namespace Lab3C
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter the mathmatical operator for the function you would like to use.");
-            Int16 input = Convert.ToInt16(Console.ReadLine());
-            switch (input)
+            string input = Convert.ToString(Console.ReadLine());
+            if ("+" == input)
             {
-                case 1:
-                    {
-                        Add();
-                        break;
-                    }
-                case 2:
-                    {
-                        Subtract();
-                        break;
-                    }
-                case 3:
-                    {
-                        Multiply();
-                        break;
-                    }
-                case 4:
-                    {
-                        Divide();
-                        break;
-                    }
+                Add();
+            }
+            else if ("-" == input)
+            {
+                Subtract();
+            }
+            else if ("*" == input)
+            {
+                Multiply();
+            }
+            else if ("/" == input)
+            {
+                Divide();
             }
         }
 
